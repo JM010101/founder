@@ -55,6 +55,9 @@ After creating the bucket, you need to set up policies:
 2. Copy the following:
    - **Project URL** → Use for `NEXT_PUBLIC_SUPABASE_URL`
    - **anon public** key → Use for `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - **service_role** key → Use for `SUPABASE_SERVICE_ROLE_KEY` (optional, for server-side admin operations)
+
+**⚠️ Security Note:** The service role key bypasses Row Level Security (RLS) and should NEVER be exposed to the client. It's only used in server-side code if needed for admin operations.
 
 ## 5. Configure Environment Variables
 
@@ -64,7 +67,10 @@ After creating the bucket, you need to set up policies:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
 ```
+
+**Note:** The service role key is optional but recommended if you plan to use server-side admin operations. It's already configured if you provided it during setup.
 
 ## 6. Verify Setup
 
