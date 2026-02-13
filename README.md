@@ -29,10 +29,14 @@ npm install
 
 ### 2. Set Up Supabase
 
+**See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for detailed step-by-step instructions.**
+
+Quick steps:
 1. Create a new project at [supabase.com](https://supabase.com)
 2. Go to SQL Editor and run the schema from `supabase/schema.sql`
 3. Create a storage bucket named `portfolio-images` with public access
-4. Copy your project URL and anon key
+4. Set up storage policies (see SUPABASE_SETUP.md)
+5. Copy your project URL and anon key
 
 ### 3. Configure Environment Variables
 
